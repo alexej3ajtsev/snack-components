@@ -1,0 +1,33 @@
+.lib-button {
+  font-weight: bold;
+  font-family: sans-serif;
+  border: 1px solid darkorange;
+  border-radius: 4px;
+  padding: 8px 10px;
+  color: #000;
+  background-color: orange;
+  padding-right: 40px;
+  position: relative;
+  transition: background-color .3s ease, border-color .3s ease, color .3s ease;
+
+  &:hover {
+    color: #444;
+    border-color: #ddd;
+    background-color: #eee;
+  }
+
+  &::before {
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 4px;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url('../../svg/burger.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
