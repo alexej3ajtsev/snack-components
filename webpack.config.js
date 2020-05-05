@@ -1,8 +1,10 @@
 const webpack = require('webpack');
 const path = require('path');
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const pkg = require('./package.json');
 const isProd = process.env.NODE_ENV === 'production';
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: isProd ? 'production' : 'development',
@@ -47,7 +49,7 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          "style-loader",
+          MiniCssExtractPlugin.loader,
           "css-loader",
           "sass-loader"
         ],
@@ -58,7 +60,11 @@ module.exports = {
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
     plugins: [
-      new TsconfigPathsPlugin()
+      new TsconfigPathsPlugin(),
     ]
   },
+  plugins: [
+    new MiniCssExtractPlugin(),
+    new CleanWebpackPlugin(),
+  ]
 };

@@ -2,7 +2,10 @@ const path = require("path");
 
 module.exports = {
   stories: ["../src/**/*.stories.tsx"],
-  addons: [],
+  addons: [
+    '@storybook/addon-viewport/register',
+    '@storybook/addon-knobs/register',
+  ],
   webpackFinal: async (config) => {
     config.module.rules.push({
       test: /\.(svg)$/i,
@@ -27,13 +30,13 @@ module.exports = {
 
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
-      loader: require.resolve("babel-loader"),
+      loader: require.resolve('babel-loader'),
       options: {
-        presets: [["react-app", { flow: false, typescript: true }]]
-      }
+        presets: [['react-app', { flow: false, typescript: true }]],
+      },
     });
+    config.devtool = 'inline-source-map';
     config.resolve.extensions.push(".ts", ".tsx");
-
     return config;
   }
 };

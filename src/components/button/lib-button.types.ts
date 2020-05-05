@@ -1,3 +1,6 @@
 export interface ILibButtomProps {
-  children: React.ReactChild
+  children: React.ReactChild;
+  onCLick: () => void;
+  isDisabled?: boolean;
+  isLoading?: boolean;
 }
