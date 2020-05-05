@@ -13,6 +13,8 @@
   transition: filter .3s ease, color .3s ease;
   cursor: pointer;
   
+  
+
   &:disabled {
     opacity: .5;
     cursor: default;
@@ -20,8 +22,33 @@
       filter: brightness(95%)
     }
   }
-
+  &--is-loading {
+    color: transparent;
+    &:disabled {
+      opacity: .9;
+    }
+  }
   &:hover {
     filter: brightness(85%)
   }
+
+  &__wrapper {
+    position: relative;
+    display: inline-flex;
+  }
+
+  &__loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    
+    &--show {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
 }

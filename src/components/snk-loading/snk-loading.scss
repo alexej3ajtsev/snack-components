@@ -1,0 +1,41 @@
+.snk-loading {
+  filter: brightness(165%);
+
+  circle {
+    transform-origin: center;
+    transform: scale(.5);
+    animation: snkLoading;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    fill: var(--snk-primary-accent)
+    
+  }
+
+  circle:nth-of-type(1) {
+    transform-origin: 25% center;
+  }
+
+  circle:nth-of-type(2) {
+    animation-delay: .25s;
+  }
+
+  circle:nth-of-type(3) {
+    animation-delay: .5s;
+    transform-origin: 75% center;
+  }
+
+  @keyframes snkLoading {
+    0% {
+      transform: scale(.5);
+      
+    }
+    50% {
+      transform: scale(1);
+      opacity: .75;
+    }
+    100% {
+      transform: scale(.5);
+    }
+  }
+}

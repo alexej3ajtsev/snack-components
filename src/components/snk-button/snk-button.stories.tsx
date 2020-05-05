@@ -7,7 +7,7 @@ import SnkThemeProvider from '../snk-theme-provider/snk-theme-provider';
 
 const theme = {
   borderRadius: '.4rem',
-  primaryAccent: '#f44336',
+  primaryAccent: 'darkorange',
   secondaryAccent: '#181818',
   primaryColor: '#fff',
   secondaryColor: '#fff',
