@@ -14,7 +14,7 @@ module.exports = {
     filename: `index.js`,
     path: path.join(__dirname, 'dist'),
     library: pkg.name,
-    libraryTarget: 'umd'
+    libraryTarget: 'commonjs2'
   },
   externals: {
     react: {

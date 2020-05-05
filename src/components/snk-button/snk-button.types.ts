@@ -1,6 +1,6 @@
-export interface ILibButtomProps {
+export interface ISnkButtonProps {
   children: React.ReactChild;
-  onCLick: () => void;
+  onClick: () => void;
   isDisabled?: boolean;
   isLoading?: boolean;
 }

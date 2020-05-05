@@ -1,0 +1,27 @@
+.snk-button {
+  border: 1px solid;
+  border-color: var(--snk-primary-accent);
+  font-weight: bold;
+  font-family: sans-serif;
+  border-radius: var(--snk-border-radius);
+  font-size: 1.4rem;
+  padding: .8em 1em;
+  color: var(--snk-primary-color);
+  background-color: var(--snk-primary-accent);
+  filter: brightness(95%);
+  position: relative;
+  transition: filter .3s ease, color .3s ease;
+  cursor: pointer;
+  
+  &:disabled {
+    opacity: .5;
+    cursor: default;
+    &:hover {
+      filter: brightness(95%)
+    }
+  }
+
+  &:hover {
+    filter: brightness(85%)
+  }
+}

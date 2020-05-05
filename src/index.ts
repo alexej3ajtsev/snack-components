@@ -1,5 +1,5 @@
-import LibButton from './components/button/lib-button';
+import SnkButton from './components/snk-button/snk-button';
 
 export {
-  LibButton
+  SnkButton
 }

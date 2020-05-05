@@ -1,0 +1,21 @@
+:root {
+  --snk-primary-accent: transparent;
+  --snk-secondary-accent: transparent;
+  --snk-primary-color: transparent;
+  --snk-secondary-color: transparent;
+  --snk-border-radius: 4px;
+  --snk-main-bg: transparent;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+html,
+body {
+  color: var(--snk-primary-color);
+  background-color: var(--snk-main-bg);
+}
